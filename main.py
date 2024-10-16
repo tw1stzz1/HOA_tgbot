@@ -88,6 +88,8 @@ def message_reply(message):
         malling_info(message)
     if text == 'Подписаться':
         save_chatid(message)
+    if text == 'Контактная информация':
+        bot.send_message(message.chat.id, 'Телефоны диспетчерской службы: \n+7 920 250-16-29\n+7 (8312) 18-05-01\nЭлектронная почта: paf75@mail.ru')
     if 'Вопрос:' in text:
         if not needHelp:
             message_to_ts(message)
